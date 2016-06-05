@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     
     
   end
-  match 'products/:id' => 'video#show' , :as => 'product' , :via => :get
-    match 'search' => 'video#search' , :as => 'search' , :via => :get
+  match 'products/:id' => 'video#show' , :as => 'product', :via => :get
+  
 
   
  

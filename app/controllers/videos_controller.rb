@@ -21,12 +21,6 @@ class VideosController < ApplicationController
   def edit
   end
   
-  def search
-    #no code included
-  end
-  def search_result
-    #here we will be using the product modelend
-  end
   
 
   # POST /videos
