@@ -24,6 +24,8 @@
         <td><%= video.category_id %></td>
         <td><%=l video.created_at %></td>
         <td>
+          <% if current_user.present? && current_user.privillege %>
+          
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_video_path(video), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
@@ -40,3 +42,4 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_video_path,
             :class => 'btn btn-primary' %>
+            <% end %>

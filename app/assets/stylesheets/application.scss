@@ -13,9 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ 
+ body{
+     background-color: blue
+ }
+ 
+ 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-body{
-    background-color :Lightblue
-    
-}
+
