@@ -12,6 +12,12 @@
   <%if user_signed_in?  %>
     <%=link_to "logout", destroy_user_session_path, method: :delete%>
   <% end %>
+  <div id="search" >
+  <%=form_tag search_results_path do %>
+  <input id="keywords" name="keywords" type="text" />
+  <%= submit_tag 'search' %>
+  <% end %>
+  </div> 
   
 <%= yield %>
 

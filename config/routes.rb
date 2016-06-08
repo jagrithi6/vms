@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :videos, :except=>:show
+  match 'search' => 'videos#search', :as => 'search', :via => :get
+  match 'search_results' => 'videos#search_results', :as => 'search_results', :via => :post
   
   devise_scope :user do
     unauthenticated :user do

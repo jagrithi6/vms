@@ -1,0 +1,2 @@
+<h2> video search</h2>
+<%= render partial :"videos_display" %>

@@ -3,13 +3,20 @@ class VideosController < ApplicationController
 
   # GET /videos
   # GET /videos.json
-  def index
-    @videos = Video.all
+  def index                          
+  @videos = Video.all
   end
 
   # GET /videos/1
   # GET /videos/1.json
   def show
+  end
+  
+  def search
+  end
+  
+  def search_results
+    @videos =Video.where("Url LIKE '%#{params[:keywords]}%'")
   end
 
   # GET /videos/new
@@ -39,7 +46,6 @@ class VideosController < ApplicationController
       end
   end
 end
-
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
@@ -72,4 +78,4 @@ end
     def video_params
       params.require(:video).permit(:url, :duration, :topic, :category_id, :view_count)
     end
-end
+  end
