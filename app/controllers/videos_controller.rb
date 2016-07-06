@@ -44,8 +44,8 @@ class VideosController < ApplicationController
         format.json { render json: @video.errors, status: :unprocessable_entity }
         
       end
+    end
   end
-end
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
@@ -76,6 +76,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:url, :duration, :topic, :category_id, :view_count)
+      params.require(:video).permit(:url, :duration, :topic, :category_id, :view_count, :image)
     end
-  end
+   end
